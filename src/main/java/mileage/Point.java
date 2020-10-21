@@ -24,7 +24,7 @@ public class Point {
         public void onPostPersist() {
                 System.out.println("\n$$$onPostPersist");
 
-                if(this.memberStatus.equals("SKT")) {
+                if(this.memberStatus.equals("NORMAL")) {
 
                         PointSaved pointSaved = new PointSaved();
                         BeanUtils.copyProperties(this, pointSaved);
@@ -43,13 +43,14 @@ public class Point {
 
         @PreUpdate
         public void onPreUpdate() {
-                
+
+
                 PointUsed pointUsed = new PointUsed();
                 BeanUtils.copyProperties(this, pointUsed);
                 pointUsed.publishAfterCommit();
                 }
 
-                }
+
 
         public Long getId() {
                 return id;
