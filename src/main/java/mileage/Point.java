@@ -24,7 +24,7 @@ public class Point {
         public void onPostPersist() {
                 System.out.println("\n$$$onPostPersist");
 
-                if(this.memberStatus.equals("NORMAL")) {
+                if(this.memberStatus.equals("SKT")) {
 
                         PointSaved pointSaved = new PointSaved();
                         BeanUtils.copyProperties(this, pointSaved);

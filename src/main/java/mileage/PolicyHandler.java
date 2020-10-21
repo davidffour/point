@@ -31,11 +31,11 @@ public class PolicyHandler {
             Point point = new Point();
             point.setMemberId(memberStatusChanged.getMemberId());
             point.setMemberStatus(memberStatusChanged.getMemberStatus());
-            if ("NORMAL".equals(memberStatusChanged.getMemberStatus())) {
+            if ("SKT".equals(memberStatusChanged.getMemberStatus())) {
                 point.setRemainPoint(point.getRemainPoint());
             } else if ("WITHDRAWAL".equals(memberStatusChanged.getMemberStatus())) {
                 point.setRemainPoint(0L);
-            } else if ("ABNORMAL".equals(memberStatusChanged.getMemberStatus())) {
+            } else if ("NON_SKT".equals(memberStatusChanged.getMemberStatus())) {
                 point.setRemainPoint(0L);
             }
 
